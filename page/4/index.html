@@ -122,262 +122,105 @@
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/23/关于github托管MacDown图片的心得/" >
+            <a class="content-show-full" href = "/2016/03/22/iOS的系统框架/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
                         
-                        <span>关于github托管MacDown图片的心得</span>
+                        <span>iOS的系统框架</span>
                     </h2>
                 </div>
                 <div class="abstract-content">
-                    总结：连接远程仓库有两种方式可以选择一种是HTTPS请求的，一种是SSH密钥对。利用Xcode中HTTPS请求方式托管项目的方法不受设置全局git用户名/邮箱的影响，也就是说，一个Xcode可以关联N个远程仓库而互不影响。
-Reference：Markdown中插入图片有什么技巧？
-在mac上使用Git和GitHub连接
-一台电脑绑定两个github帐号教程
-利用Xcode而非SSH Key将项目托管到GitHub
+                    简介 iOS是于UNIX内核，android基于Linux内核。 iOS的系统架构分为四个层次：核心操作系统层（Core OS layer）、核心服务层（Core Services layer）、媒体层（Media layer）和可触摸层（Cocoa Touch layer）。下面是IOS系统结构图。
+iOS系统结构
+Core OS是位于ios系统架构最下面的一层是核心操作系统层，它包括内存管理、文件系统、电源管理以及一些其他的操作系统任务。它可以直接和硬件设备进行交互。作为app开发者不需要与这一层打交道。
+Core Services是核心服务层，可以通过它来访问iOS的一些服务。
+M...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/03/22/iOS常用的开发模式总结/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS常用的开发模式总结</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    iOS开发学习中，常用的开发模式有：代理模式，观察者模式，MVC模式，单例模式，策略模式，工厂模式等，下面简单的介绍下。
+（一）代理模式应用场景：当一个类的某些功能需要由别的类来实现，但是又不确定具体会是哪个类实现。
+优势：解耦合
+敏捷原则：开放-封闭原则
+实例：tableview的 数据源delegate，通过和protocol的配合，完成委托诉求。列表row个数delegate自定义的delegate
+（二）观察者模式应用场景：一般为model层对，controller和view进行的通知方式，不关心谁去接收，只负责发布信息。
+优势：解耦合
+敏捷原则：接口隔离原则，开放-封闭原则
+实...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/03/22/Mac-Spotlight搜索快捷键/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Mac Spotlight搜索快捷键</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    很多刚入手mac的小伙伴不知道怎么用Spotlight ，其实它是个强大的本地搜索引擎，下面列举了常见的Spotlight快捷键的用法，希望对大家有所帮助。
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/22/hexo搭建博客/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>Hexo + GitHub 搭建博客</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    Hexo搭建博客整理。
-整理一下安装流程
+打开Spotlight菜单：Control+空格
 
-hexo是基于nodejs的，需安装nodejs，安装nodejs最好选择homebrew
-首先查看电脑是否安装ruby，因为homebrew安装依赖ruby
-安装顺序：homebrew-&gt;nodejs-&gt;hexo
+在Finder中打开Spotlight：Command+Option+空格
 
-Hexo + GitHub 搭建博客准备
-Mac 
-Xcode
-终端
+清空Spotlight搜索框：ESC
 
-安装homebrew1ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-安装node.js1bre...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/22/MacDown基础语法/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>MacDown 基础语法</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。
-MacDown 基础语法1. 标题设置在Markdown当中设置标题，有两种方式：第一种：通过在文字下方添加=和-，他们分别表示一级标题和二级标题。第二种：在文字开头加上 #，通过#数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）
-2. 块注释通过在文字开头添加&gt;表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）
-3. 斜体将需要设置为斜体的文字两端使用1个*或者_夹起来
-4. 粗体将需要设置为斜体的文字两端使用2个*或者_夹起来
-5. 无序列表在文...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 语法>语法</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/08/15/iOS-应用内跳转APPStore/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS 应用内跳转APPStore</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    iOS开发中，应用内直接跳转到Appstore
-1.进入appstore中指定的应用1234NSString *str = [NSString stringWithFormat:                          @&quot;itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa /wa/viewContentsUserReviews?type=Purple+Software&amp;id=%d&quot;,                          myAppID ];  [[UIApplication s...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/08/15</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/08/08/mac-复制文件出错-8058错误/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>mac 复制文件出错 8058错误</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    今天早上打开电脑，例行复制一份程序备份，就遇到了8058错误，尝试了重启电脑，修改文件夹权限再改回来，都无效。
-感谢the-operation-can-t-be-completed-because-an-unexpected-error-occurred-error-cod这个问题，看到回答数为0我还很郁闷，点开发现问题在主楼就解决了=w=，太好了。
-Xcode向工程中添加文件的时候，可以向一个文件夹下添加它本身，虽然这个操作在工程中会提示同名item已存在，操作失败，不会在工程中显示，但实际上在文件夹中这个复制已经完成，并且形成了一个递归的文件夹，可以不断点开。虽然很好玩但是这样就没法...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = bug总结>bug总结</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/08/08</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/24/iOS-100道面试题-绝对干货/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS 100道面试题 绝对干货</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51490872
+关闭Spotlight菜单：ESC按两次
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/24</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/13/UI-ID-UE-GUI-是什么/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>UI ID UE GUI 是什么?</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    UI（User Interface）用户界面设计，是指对应用软件的操作逻辑、人机交互、界面的整体设计。从20 世纪80 年代起，用户界面设计成为了计算机科学的正式学科。在设计理念上，UI 设计不仅是让软件变得有个性、有品味，还要让软件的操作变得舒适、简单、自由，充分体现软件的定位和特点。
-ID（Interaction Design）交互设计，又称互动设计，它考虑的是人、环境与设备的关系和行为，以及传达这种行为的元素的设计。这个解释有点难懂。简单地说，我们进行交互设计，就是为了让产品更易用、有效，让人使用产品时感到舒适。同时，它需要了解用户和他们的期望，了解用户在同产品交互时彼此的行为，以...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/13</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/11/iOS面试题目/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS面试题目</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51372678
+7个Spotlight使用&amp;导航快捷键：
 
+打开第一个搜索项目：回车
+
+在搜索结果中导航移动：上箭头、下箭头
+
+在Finder中国定位第一个搜索项目：Command+回车 （其他项可以将光标移过去再这么按）
+
+查...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -387,13 +230,11 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
     
         <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
 </div>
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/11</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
                 </div>
             </div>
         </article>
@@ -401,16 +242,23 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/06/iOS-面试-笔试题/" >
+            <a class="content-show-full" href = "/2016/03/22/解耦合/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
                         
-                        <span>iOS 面试 + 笔试题</span>
+                        <span>解耦合</span>
                     </h2>
                 </div>
                 <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51331654
+                    耦合是一个宽泛的概念。两个程序模块有关联就叫做耦合。
+某些模块必然要关联起来才能工作，这是由业务逻辑决定的，不能否认。所以解耦并不是字面意义上的把关联拆掉，而是把模块之间的关联放松到必要的程度。一些建议：
 
+模块只对外暴露最小限度的接口，形成最低的依赖关系。
+只要对外接口不变，模块内部的修改，就不得影响其他模块；
+删除一个模块，应当只影响有依赖关系的其他模块，而不应该影响其他无关部分；
+
+软件工程有一条铁律“高内聚、低耦合”就是这个道理：必要的耦合不可否认，没有耦合程序就做不成事；但是不必要的紧耦合，就会让程序“牵一发而动全身”，最终让程序员的编写和维护都无从下手。
+人类同一时间只能专注...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -418,15 +266,13 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = 网络>网络</a>
     
 </div>
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/06</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
                 </div>
             </div>
         </article>
@@ -434,16 +280,18 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/05/iOS-面试题/" >
+            <a class="content-show-full" href = "/2016/03/14/NSOperationQueue-GCD-NSThread总结/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
                         
-                        <span>iOS 面试题</span>
+                        <span>NSOperationQueue GCD NSThread总结</span>
                     </h2>
                 </div>
                 <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51321662
-
+                    NSThread优点：NSThread 比其他两个轻量级
+缺点：需要自己管理线程的生命周期，线程同步。线程同步对数据的加锁会有一定的系统开销
+Cocoa NSOperation优点:不需要关心线程管理，数据同步的事情，可以把精力放在自己需要执行的操作上。
+Cocoa operation相关的类是NSOperation, NSOperationQueue.NSOperation是个抽象类,使用它必须用它的子类，可以实现它或者使用它定义好的两个子类: NSInvocationOperation和NSBlockOperation.创建NSOperation子类的对象，把对象添加到NSOpera...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -453,13 +301,53 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
     
         <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = 多线程>多线程</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
     
 </div>
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/05</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/14</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/03/14/进程总结/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>进程总结</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    进程总结概念进程正在进行的程序,我们就叫它进程.
+线程线程就是进程中的一个独立的执行路径.这句话怎么理解呢! 一个程序它是按顺序从上往下执行的, 这个执行顺序我们可以把它看成是一条线,把这条线就叫做线程(个人理解,错了勿喷);每一个程序中至少包含一条线程, 这条线程,我们叫它主线程.
+多线程多线程也就是说一个程序中有多条执行路径.在iOS当中将一些比较耗时的操作放到另一条执行路径里.让它与主线程同时运行.这样不会造成主线程的堵塞.
+扯完了这些那我们来看看什么是任务,什么是队列!
+任务任务分为同步任务与异步任务,它们的区别是：
+同步任务优先级高，在线程中有执行顺序，不会开启新的线程。
+异步...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 多线程>多线程</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/14</span>
                 </div>
             </div>
         </article>
@@ -467,7 +355,7 @@ ID（Interaction Design）交互设计，又称互动设计，它考虑的是人
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">#NEXT</a>
+        <a class="extend prev" rel="prev" href="/page/3/">#PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
     </nav>
     
 </main>
