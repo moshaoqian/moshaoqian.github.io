@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        莫少谦的创意工厂
+        MacDown进阶语法 · 莫少谦的创意工厂
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -68,7 +68,7 @@
     
 </head>
     
-        <body class="four-zero-four-body">
+        <body class="post-body">
     
     
 <header class="header">
@@ -76,8 +76,20 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+        <div class="toggle-banner">
+            <div class="blog-title">
+                <a href="/" >莫少谦的创意工厂</a>
+            </div>
+            <div class="post-banner">
+                <span class="post-name">MacDown进阶语法</span>
+            </div>
+        </div>
+    </div>
+    
     <a class="home-link" href=/>莫少谦的创意工厂</a>
 </header>
+    
     
     <div class="wrapper">
         <div class="site-intro">
@@ -85,117 +97,93 @@
     <!-- 主页  -->
     
     
+    <!-- 404页  -->
     
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [404]
+            MacDown进阶语法
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            <p class="intro-subtitle"> </p>
+            
+        </p>
+        <!-- 404 -->
         
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 语法>语法</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/08/24</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2017/08/24/MacDown进阶语法/" data-title = "MacDown进阶语法" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
+            <main class="main post-page">
     <div class="qr-mask"></div>
 <div class="QRcode-box">
     <p>扫描二维码分享</p>
     <div class="QRcode-close">×</div>
 </div>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/23/关于github托管MacDown图片的心得/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>关于github托管MacDown图片的心得</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    总结：连接远程仓库有两种方式可以选择一种是HTTPS请求的，一种是SSH密钥对。利用Xcode中HTTPS请求方式托管项目的方法不受设置全局git用户名/邮箱的影响，也就是说，一个Xcode可以关联N个远程仓库而互不影响。
-Reference：Markdown中插入图片有什么技巧？
-在mac上使用Git和GitHub连接
-一台电脑绑定两个github帐号教程
-利用Xcode而非SSH Key将项目托管到GitHub
+    <article class="article-entry">
+        <h2 id="标准语法图片"><a href="#标准语法图片" class="headerlink" title="标准语法图片"></a>标准语法图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![测试图](https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg)</div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg" alt="测试图"></p>
+<h2 id="图片大小自定义"><a href="#图片大小自定义" class="headerlink" title="图片大小自定义"></a>图片大小自定义</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> </span></div><div class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg"</span> <span class="attr">width</span> = <span class="string">"300"</span> <span class="attr">height</span> = <span class="string">"200"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> </span></div><div class="line"><span class="tag">/&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg" width="300" height="200" alt="图片名称" align="center"></p>
+<h2 id="图片大小自定义且不拉伸"><a href="#图片大小自定义且不拉伸" class="headerlink" title="图片大小自定义且不拉伸"></a>图片大小自定义且不拉伸</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> </span></div><div class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg"</span> <span class="attr">width</span> = <span class="string">"100"</span> <span class="attr">height</span> = <span class="string">"auto"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> </span></div><div class="line"><span class="tag">/&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg" width="100" height="auto" alt="图片名称" align="center"></p>
+<h2 id="图片剧中"><a href="#图片剧中" class="headerlink" title="图片剧中"></a>图片剧中</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>    </div><div class="line"><span class="tag">&lt;<span class="name">img</span> </span></div><div class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> </span></div><div class="line"><span class="tag">/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/9313085de5f776c462ffe2974edf4d4d563ce6d6/%E5%8D%9A%E5%AE%A2/MacDown%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95_1.jpeg" alt="测试图片" align="center"><br></div>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/22/hexo搭建博客/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>Hexo + GitHub 搭建博客</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    Hexo搭建博客整理。
-整理一下安装流程
 
-hexo是基于nodejs的，需安装nodejs，安装nodejs最好选择homebrew
-首先查看电脑是否安装ruby，因为homebrew安装依赖ruby
-安装顺序：homebrew-&gt;nodejs-&gt;hexo
 
-Hexo + GitHub 搭建博客准备
-Mac 
-Xcode
-终端
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="next">
+                <a href= "/2017/08/23/关于github托管MacDown图片的心得/" title= 关于github托管MacDown图片的心得 >
+                    <span>Next Post</span>
+                    <span>关于github托管MacDown图片的心得</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
 
-安装homebrew1ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-安装node.js1bre...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/22</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
             
