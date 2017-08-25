@@ -117,18 +117,25 @@
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/14/NSOperationQueue-GCD-NSThread总结/" >
+            <a class="content-show-full" href = "/2017/08/25/Swift学习整理/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
                         
-                        <span>NSOperationQueue GCD NSThread总结</span>
+                        <span>Swift学习整理(持续更新中)</span>
                     </h2>
                 </div>
                 <div class="abstract-content">
-                    NSThread优点：NSThread 比其他两个轻量级
-缺点：需要自己管理线程的生命周期，线程同步。线程同步对数据的加锁会有一定的系统开销
-Cocoa NSOperation优点:不需要关心线程管理，数据同步的事情，可以把精力放在自己需要执行的操作上。
-Cocoa operation相关的类是NSOperation, NSOperationQueue.NSOperation是个抽象类,使用它必须用它的子类，可以实现它或者使用它定义好的两个子类: NSInvocationOperation和NSBlockOperation.创建NSOperation子类的对象，把对象添加到NSOpera...
+                    一：语法认识输出:
+1print("hello, world")
+变量：
+1var str = "Hello"
+常量：
+1let hello = "Hola, qué tal"
+关键字override在Swift中, 如果我们要重写某个方法, 或者某个属性的话, 我们需要在重写的变量前增加一个override关键字。
+lazy懒加载
+fileprivate这个元素的访问权限为文件内私有
+deinit析构器deinit只适用于类类型，当一个类的实例被释放之前，析构器会被立即调用。析构器用关键字deinit来标识，类似于构造器用init来标识。
+extension扩展是给已经存在的类（cla...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -138,53 +145,13 @@ Cocoa operation相关的类是NSOperation, NSOperationQueue.NSOperation是个抽
     
         <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 多线程>多线程</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = Swift>Swift</a>
     
 </div>
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/14</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/14/进程总结/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>进程总结</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    进程总结概念进程正在进行的程序,我们就叫它进程.
-线程线程就是进程中的一个独立的执行路径.这句话怎么理解呢! 一个程序它是按顺序从上往下执行的, 这个执行顺序我们可以把它看成是一条线,把这条线就叫做线程(个人理解,错了勿喷);每一个程序中至少包含一条线程, 这条线程,我们叫它主线程.
-多线程多线程也就是说一个程序中有多条执行路径.在iOS当中将一些比较耗时的操作放到另一条执行路径里.让它与主线程同时运行.这样不会造成主线程的堵塞.
-扯完了这些那我们来看看什么是任务,什么是队列!
-任务任务分为同步任务与异步任务,它们的区别是：
-同步任务优先级高，在线程中有执行顺序，不会开启新的线程。
-异步...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 多线程>多线程</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/14</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/25</span>
                 </div>
             </div>
         </article>

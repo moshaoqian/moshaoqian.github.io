@@ -117,6 +117,37 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/07/iOS内存管理机制总结/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS内存管理机制总结</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    iOS框架的内存管理机制看似比较复杂，其实不然。一套把戏的制定，必然有她的道理。我认为ios框架的内存机制的本质是为了更好的让设计人员方便管理内存，减少程序中的内存泄露，在内存管理难度与性能之间找一个最佳的平衡点。假设你开辟了一块新内存，并把内存地址付给指针A，后来你也想让指针B也共享这块内存，于是你把指针A付给指针B，这个时候，A和B都指向同一块内存。如果A在没有通知B的情况下，A擅自把把这块内存释放了，B使用这块内存的时候，程序必然会crash掉。
+　　有没有办法在释放内存的时候，通知一下所有正在和将来要引用这块内存的所有指针呢？答应是有的，只不过这种通知，不是主动式通知。在Obje...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2016/04/07/error-linker-command-failed-with-exit-code-1-use-v-to-see-invocation/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
@@ -511,40 +542,6 @@ CMD ...
         <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
         <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/22/iOS的系统框架/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS的系统框架</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    简介 iOS是于UNIX内核，android基于Linux内核。 iOS的系统架构分为四个层次：核心操作系统层（Core OS layer）、核心服务层（Core Services layer）、媒体层（Media layer）和可触摸层（Cocoa Touch layer）。下面是IOS系统结构图。
-iOS系统结构
-Core OS是位于ios系统架构最下面的一层是核心操作系统层，它包括内存管理、文件系统、电源管理以及一些其他的操作系统任务。它可以直接和硬件设备进行交互。作为app开发者不需要与这一层打交道。
-Core Services是核心服务层，可以通过它来访问iOS的一些服务。
-M...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
 </div>
                 
@@ -1157,7 +1154,18 @@ M...
     
     
     
-    <div class="total-archive"> Total : 38 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 39 </div>
     
     <div class="post-archive">
     
@@ -1166,6 +1174,11 @@ M...
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/25</span><a class="archive-post-title" href= "/2017/08/25/Swift学习整理/" >Swift学习整理(持续更新中)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1338,7 +1351,7 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
         </li>
     
     
@@ -1348,7 +1361,7 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
         </li>
     
     
@@ -1371,9 +1384,9 @@ M...
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">随记</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
@@ -1381,13 +1394,15 @@ M...
     
         <span class="sidebar-tag-name"><a href= "#">OC</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">技术</a></span>
+        <span class="sidebar-tag-name"><a href= "#">Swift</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
+        <span class="sidebar-tag-name"><a href= "#">技术</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">UIKit</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">面试</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">RunLoop</a></span>
     

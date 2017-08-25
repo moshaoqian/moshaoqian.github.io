@@ -117,6 +117,47 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/08/iOS UIMenuController简介/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS UIMenuController简介</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    一点小知识，有必要总结一下。
+
+Menu所处的View必须实现– (BOOL)canBecomeFirstResponder,且返回YES
+Menu所处的View必须实现 – (BOOL)canPerformAction:withSender,并根据需求返回YES或NO
+使Menu所处的View成为First ResponderbecomeFirstResponder
+定位Menu - setTargetRect:inView:
+展示Menu - setMenuVisible:animated:
+
+###代码栗子如下
+12345678910111213141516UIMenuContro...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = UIKit>UIKit</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/08</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2016/04/07/iOS内存管理机制总结/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
@@ -491,42 +532,6 @@ import关键字#import 和 #include 的异同相同点：1.都是预编译指令
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-href = 随记>随记</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/23/iOS项目小结/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS项目小结</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    2016.3.23
-总结一些小项目的步骤，菜鸟出品。
-一. 项目小结##三方介绍
-SDWebImage与UIImageView+SDWebImage介绍SDWebImage这个类库提供一个UIImageView类别以支持加载来自网络的远程图片。具有缓存管理、异步下载、同一个URL下载次数控制和优化等特征。
-UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage的封装，我们写项目的时候只需要调用它就可以了。
-用途简单来说，就是当我们重写UITableViewCell的时候，需要给cell的iconView属性赋值，这时候需要调用：
-12...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
 </div>
                 
@@ -1139,7 +1144,18 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
     
     
     
-    <div class="total-archive"> Total : 38 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 39 </div>
     
     <div class="post-archive">
     
@@ -1148,6 +1164,11 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/25</span><a class="archive-post-title" href= "/2017/08/25/Swift学习整理/" >Swift学习整理(持续更新中)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1320,7 +1341,7 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
         </li>
     
     
@@ -1330,7 +1351,7 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
         </li>
     
     
@@ -1353,9 +1374,9 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">随记</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
@@ -1363,13 +1384,15 @@ UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage�
     
         <span class="sidebar-tag-name"><a href= "#">OC</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">技术</a></span>
+        <span class="sidebar-tag-name"><a href= "#">Swift</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
+        <span class="sidebar-tag-name"><a href= "#">技术</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">UIKit</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">面试</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">RunLoop</a></span>
     
