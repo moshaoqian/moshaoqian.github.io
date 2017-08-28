@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        iOS开发模式之单例模式 · 莫少谦的创意工厂
+        Xcode关联方法将项目托管到GitHub · 莫少谦的创意工厂
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -82,7 +82,7 @@
                 <a href="/" >莫少谦的创意工厂</a>
             </div>
             <div class="post-banner">
-                <span class="post-name">iOS开发模式之单例模式</span>
+                <span class="post-name">Xcode关联方法将项目托管到GitHub</span>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            iOS开发模式之单例模式
+            Xcode关联方法将项目托管到GitHub
             <!-- 404 -->
             
         </h1>
@@ -126,18 +126,18 @@
     
         <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2016/03/22</span>
+                <span class="post-intro-time">2017/08/28</span>
             </div>
             <!-- 
 
 <div class="post-share iconfont-archer">
-    <ul class="share-box" data-href = "/2016/03/22/iOS开发模式之单例模式/" data-title = "iOS开发模式之单例模式" >
+    <ul class="share-box" data-href = "/2017/08/28/ Xcode关联方法将项目托管到GitHub/" data-title = "Xcode关联方法将项目托管到GitHub" >
         <li class="to-weibo">分享到微博</li>
         <li class="to-wechat">分享到微信</li>
         <li class="to-qq">分享到QQ</li>
@@ -155,51 +155,17 @@
     <div class="QRcode-close">×</div>
 </div>
     <article class="article-entry">
-        <h1 id="iOS单例模式-Singleton"><a href="#iOS单例模式-Singleton" class="headerlink" title="iOS单例模式(Singleton)"></a>iOS单例模式(Singleton)</h1><p>单例模式的意思就是只有一个实例。单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。这个类称为单例类。</p>
-<h2 id="1-单例模式的要点："><a href="#1-单例模式的要点：" class="headerlink" title="1.单例模式的要点："></a>1.单例模式的要点：</h2><p>　　显然单例模式的要点有三个；一是某个类只能有一个实例；二是它必须自行创建这个实例；三是它必须自行向整个系统提供这个实例。</p>
-<h2 id="2-单例模式的优点："><a href="#2-单例模式的优点：" class="headerlink" title="2.单例模式的优点："></a>2.单例模式的优点：</h2><ul>
-<li>实例控制：Singleton 会阻止其他对象实例化其自己的 Singleton 对象的副本，从而确保所有对象都访问唯一实例。</li>
-<li>灵活性：因为类控制了实例化过程，所以类可以更加灵活修改实例化过程</li>
-<li>性能高： 由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象单例模式无疑可以提高系统的性能。</li>
-</ul>
-<h2 id="3-单例模式的缺点："><a href="#3-单例模式的缺点：" class="headerlink" title="3.单例模式的缺点："></a>3.单例模式的缺点：</h2><ul>
-<li><p>由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。</p>
-</li>
-<li><p>单例类的职责过重，在一定程度上违背了“单一职责原则”。</p>
-</li>
-<li><p>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出；如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。</p>
-</li>
-</ul>
-<h2 id="在iOS中使用单例模式的情况"><a href="#在iOS中使用单例模式的情况" class="headerlink" title="在iOS中使用单例模式的情况"></a>在iOS中使用单例模式的情况</h2><ul>
-<li>如果说创建一个对象会耗费很多系统资源，那么此时采用单例模式，因为只需要一个实例，会节省alloc的时间.</li>
-<li>在ios开发中，如果很多模块都要使用同一个变量，此时如果把该变量放入单例类，则所有访问该变量的调用变得很容易，否则，只能通过一个模块传递给另外一个模块，这样增加了风险和复杂度.</li>
-</ul>
-<h2 id="iOS中的单例模式"><a href="#iOS中的单例模式" class="headerlink" title="iOS中的单例模式"></a>iOS中的单例模式</h2><p>在objective-c中要实现一个单例类，至少需要做以下四个步骤：</p>
-<ul>
-<li>为单例对象实现一个静态实例，并初始化，然后设置成nil.</li>
-<li>实现一个实例构造方法检查上面声明的静态实例是否为nil，如果是则新建并返回一个本类的实例，</li>
-<li>重写allocWithZone方法，用来保证其他人直接使用alloc和init试图获得一个新实力的时候不产生一个新实例，</li>
-<li>适当实现allocWitheZone，copyWithZone，release和autorelease。</li>
-</ul>
-<p>下面以SurveyRunTimeData为例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">static SurveyRunTimeData *sharedObj = nil; //第一步：静态实例，并初始化。</div><div class="line">@implementation SurveyRunTimeData</div><div class="line">+ (SurveyRunTimeData*) sharedInstance  //第二步：实例构造检查静态实例是否为nil</div><div class="line">&#123;</div><div class="line">    @synchronized (self)</div><div class="line">    &#123;</div><div class="line">        if (sharedObj == nil)</div><div class="line">        &#123;</div><div class="line">            [[self alloc] init];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return sharedObj;</div><div class="line">&#125;</div><div class="line"></div><div class="line">+ (id) allocWithZone:(NSZone *)zone //第三步：重写allocWithZone方法</div><div class="line">&#123;</div><div class="line">    @synchronized (self) &#123;</div><div class="line">        if (sharedObj == nil) &#123;</div><div class="line">            sharedObj = [super allocWithZone:zone];</div><div class="line">            return sharedObj;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return nil;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (id) copyWithZone:(NSZone *)zone //第四步</div><div class="line">&#123;</div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (id) retain</div><div class="line">&#123;</div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (unsigned) retainCount</div><div class="line">&#123;</div><div class="line">    return UINT_MAX;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (oneway void) release</div><div class="line">&#123;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (id) autorelease</div><div class="line">&#123;</div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (id)init</div><div class="line">&#123;</div><div class="line">    @synchronized(self) &#123;</div><div class="line">        [super init];//往往放一些要初始化的变量.</div><div class="line">        return self;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+        <p><a href="http://www.cnblogs.com/wendingding/p/5584310.html" target="_blank" rel="external">如何把项目托管到GitHub</a></p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="previous">
-                <a href= "/2016/03/22/Xcode快捷键/" title= Xcode快捷键 >
-                    <span>Previous Post</span>
-                    <span>Xcode快捷键</span>
-                </a>
-            </li>
-        
         
             <li class="next">
-                <a href= "/2016/03/22/iOS的系统框架/" title= iOS的系统框架 >
+                <a href= "/2017/08/25/Swift学习整理/" title= Swift学习整理(持续更新中) >
                     <span>Next Post</span>
-                    <span>iOS的系统框架</span>
+                    <span>Swift学习整理(持续更新中)</span>
                 </a>
             </li>
         
