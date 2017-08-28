@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        iOS RunLoop笔记 · 莫少谦的创意工厂
+        莫少谦的创意工厂
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -82,7 +82,7 @@
                 <a href="/" >莫少谦的创意工厂</a>
             </div>
             <div class="post-banner">
-                <span class="post-name">iOS RunLoop笔记</span>
+                <span class="post-name"></span>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            iOS RunLoop笔记
+            [Untitled Post]
             <!-- 404 -->
             
         </h1>
@@ -122,22 +122,14 @@
         
             <!-- 文章页标签  -->
             
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = RunLoop>RunLoop</a>
-    
-</div>
-            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2016/04/15</span>
+                <span class="post-intro-time">2017/08/28</span>
             </div>
             <!-- 
 
 <div class="post-share iconfont-archer">
-    <ul class="share-box" data-href = "/2016/04/15/iOS-RunLoop笔记/" data-title = "iOS RunLoop笔记" >
+    <ul class="share-box" data-href = "/2017/08/28/iOS模拟器录制屏幕生成Gif/" data-title = "" >
         <li class="to-weibo">分享到微博</li>
         <li class="to-wechat">分享到微信</li>
         <li class="to-qq">分享到QQ</li>
@@ -155,87 +147,23 @@
     <div class="QRcode-close">×</div>
 </div>
     <article class="article-entry">
-        <h1 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一: 简介"></a>一: 简介</h2><h3 id="基本作用"><a href="#基本作用" class="headerlink" title="基本作用"></a>基本作用</h3><ul>
-<li><p>保持程序的持续运行</p>
-</li>
-<li><p>处理App中的各种事件（比如触摸事件、定时器事件、Selector事件）</p>
-</li>
-<li><p>节省CPU资源，提高程序性能：该做事时做事，该休息时休息</p>
-</li>
-<li><p>没有RunLoop的情况下，第3行后程序就结束了</p>
-</li>
-</ul>
-<h3 id="main函数中的RunLoop"><a href="#main函数中的RunLoop" class="headerlink" title="main函数中的RunLoop"></a>main函数中的RunLoop</h3><ul>
-<li><p>第14行代码的UIApplicationMain函数内部就启动了一个RunLoop</p>
-</li>
-<li><p>所以UIApplicationMain函数一直没有返回，保持了程序的持续运</p>
-</li>
-<li><p>这个默认启动的RunLoop是跟主线程相关联的</p>
-</li>
-</ul>
-<h3 id="RunLoop对象"><a href="#RunLoop对象" class="headerlink" title="RunLoop对象"></a>RunLoop对象</h3><ul>
-<li><p><nsrunloop>和<cfrunloopref>都代表着RunLoop对象</cfrunloopref></nsrunloop></p>
-</li>
-<li><p>NSRunLoop是基于CFRunLoopRef的一层OC包装，所以要了解RunLoop内部结构，需要多研究CFRunLoopRef层面的API（Core Foundation层面）</p>
-</li>
-</ul>
-<h2 id="二-使用"><a href="#二-使用" class="headerlink" title="二: 使用"></a>二: 使用</h2><h3 id="线程与RunLoop"><a href="#线程与RunLoop" class="headerlink" title="线程与RunLoop"></a>线程与RunLoop</h3><ul>
-<li>每条线程都有唯一的一个与之对应的RunLoop对象</li>
-<li>主线程的RunLoop已经自动创建好了，子线程的RunLoop需要主动创建</li>
-<li>RunLoop在第一次获取时创建，在线程结束时销毁</li>
-</ul>
-<p>当前线程的RunLoop</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[NSRunLoop currentRunLoop];</div></pre></td></tr></table></figure>
-<p>主线程的RunLoop</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[NSRunLoop mainRunLoop];主线程的RunLoop</div></pre></td></tr></table></figure>
-<h3 id="RunLoop相关类"><a href="#RunLoop相关类" class="headerlink" title="RunLoop相关类"></a>RunLoop相关类</h3><ul>
-<li><p>SRunLoop和CFRunLoopRef都代表着RunLoop对象</p>
-</li>
-<li><p>NSRunLoop是基于CFRunLoopRef的一层OC包装，所以要了解RunLoop内部结构，需要多研究CFRunLoopRef层面的API（Core Foundation层面）</p>
-</li>
-</ul>
-<h3 id="CFRunLoopModeRef"><a href="#CFRunLoopModeRef" class="headerlink" title="CFRunLoopModeRef"></a>CFRunLoopModeRef</h3><ul>
-<li><p>代表RunLoop的运行模式,共5种</p>
-<ul>
-<li><p>kCFRunLoopDefaultMode：App的默认Mode，通常主线程是在这个Mode下运行</p>
-</li>
-<li><p>UITrackingRunLoopMode：界面跟踪 Mode，用于ScrollView 追踪触摸滑动，保证界面滑动时不受其他 Mode 影响</p>
-</li>
-</ul>
-</li>
-<li><p>一个 RunLoop 包含若干个 Mode，每个Mode又包含若干个Source/Timer/Observer</p>
-</li>
-<li><p>每次RunLoop启动时，只能指定其中一个 Mode，这个Mode被称作 CurrentMode</p>
-</li>
-<li><p>如果需要切换Mode，只能退出Loop，再重新指定一个Mode进入这样做主要是为了分隔开不同组的Source/Timer/Observer，让其互不影响</p>
-</li>
-</ul>
-<p><code>CFRunLoopTimerRef</code>:基于时间的触发器，基本上就是NSTimer<br><code>CFRunLoopObserverRef</code>:是观察者，能够监听RunLoop的状态改变</p>
-<h2 id="三：RunLoop处理逻辑"><a href="#三：RunLoop处理逻辑" class="headerlink" title="三：RunLoop处理逻辑"></a>三：RunLoop处理逻辑</h2><p><a href="">RunLoop的处理逻辑</a></p>
-<h2 id="四：RunLoop应用"><a href="#四：RunLoop应用" class="headerlink" title="四：RunLoop应用"></a>四：RunLoop应用</h2><ul>
-<li>NSTimer</li>
-<li>ImageView显示</li>
-<li>PerformSelector</li>
-<li>常驻线程</li>
-<li>自动释放池</li>
-</ul>
-
+        <p>有的时候我们需要将ios app 的运行效果录制下来并保存成gif动画，那么我们可以这样做。</p>
+<h2 id="录制mov格式视频"><a href="#录制mov格式视频" class="headerlink" title="录制mov格式视频"></a>录制mov格式视频</h2><p>打开mac自带 QuickTime Player</p>
+<p>QuickTime Player &gt; 文件 &gt; 新建屏幕录制</p>
+<p>点击录制按钮 &gt; 选择录制区域 (选择模拟器) &gt; 开始录制</p>
+<p>录制完成 &gt; 点击mac右上角停止按钮结束录制 &gt; 保存格式为 mov<br>将mov视频转成gif</p>
+<h2 id="Gifrocket转换成GIF"><a href="#Gifrocket转换成GIF" class="headerlink" title="Gifrocket转换成GIF"></a>Gifrocket转换成GIF</h2><p><a href="http://www.gifrocket.com/" target="_blank" rel="external">链接</a></p>
+<p>安装后运行，录制好的视频拖入，一会即可。</p>
+<h2 id="效果测试"><a href="#效果测试" class="headerlink" title="效果测试"></a>效果测试</h2><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/598d7c7da238531415e626930277063c900fcfcb/%E5%85%B6%E4%BB%96/%E6%B5%8B%E8%AF%95.gif" alt="测试图片" width="200" height="auto" align="center"><br></div>
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="previous">
-                <a href= "/2016/04/22/iOS-更改项目名称/" title= iOS 更改项目名称 >
-                    <span>Previous Post</span>
-                    <span>iOS 更改项目名称</span>
-                </a>
-            </li>
-        
         
             <li class="next">
-                <a href= "/2016/04/15/iOS-RunLoop处理逻辑（图解/" title= iOS RunLoop处理逻辑（图解) >
+                <a href= "/2017/08/28/全局忽略DS_Store/" title= 全局忽略DS_Store >
                     <span>Next Post</span>
-                    <span>iOS RunLoop处理逻辑（图解)</span>
+                    <span>全局忽略DS_Store</span>
                 </a>
             </li>
         
