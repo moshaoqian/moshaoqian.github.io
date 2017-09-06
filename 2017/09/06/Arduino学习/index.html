@@ -68,7 +68,7 @@
     
 </head>
     
-        <body class="four-zero-four-body">
+        <body class="post-body">
     
     
 <header class="header">
@@ -76,8 +76,20 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+        <div class="toggle-banner">
+            <div class="blog-title">
+                <a href="/" >莫少谦的创意工厂</a>
+            </div>
+            <div class="post-banner">
+                <span class="post-name"></span>
+            </div>
+        </div>
+    </div>
+    
     <a class="home-link" href=/>莫少谦的创意工厂</a>
 </header>
+    
     
     <div class="wrapper">
         <div class="site-intro">
@@ -85,200 +97,127 @@
     <!-- 主页  -->
     
     
+    <!-- 404页  -->
     
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/404.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [404]
+            [Untitled Post]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            <p class="intro-subtitle"> </p>
+            
+        </p>
+        <!-- 404 -->
         
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/09/06</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2017/09/06/Arduino学习/" data-title = "" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
+            <main class="main post-page">
     <div class="qr-mask"></div>
 <div class="QRcode-box">
     <p>扫描二维码分享</p>
     <div class="QRcode-close">×</div>
 </div>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/24/iOS-100道面试题-绝对干货/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS 100道面试题 绝对干货</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51490872
+    <article class="article-entry">
+        <h1 id="Arduino"><a href="#Arduino" class="headerlink" title="Arduino"></a>Arduino</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><code>int led 11;</code></p>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul>
+<li>逻辑常量（布尔常量）：false和true</li>
+<li>数字引脚常量：INPUT和OUTPUT</li>
+<li>引脚电压常量：HIGH和LOW</li>
+<li>自定义常量 const</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
+<li>arrayInts [6];  </li>
+<li>arrayNums [] = {2，4，6，8，11}; </li>
+<li>arrayVals [6] = {2，4，-8，3，5}; </li>
+<li>char arrayString[7] = “Arduino”;</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li>程序架构必须有两个函数setup()和loop()</li>
+<li><code>setup()</code>在Arduino程序运行时首先要调用setup()函数，用于初始化 </li>
+<li><code>loop()</code>该函数在程序运行过程中不断地循环，根据反馈，相应地改变执行情况。通过该函数动态控制Arduino主控板.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">void flash(int delayTime3)&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">调用：</div><div class="line"></div><div class="line">flash(1);</div></pre></td></tr></table></figure>
+<h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><p>###数字输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">void setup() &#123;  </div><div class="line">	pinMode(outPin,OUTPUT); </div><div class="line">&#125;</div><div class="line">void loop() &#123;  </div><div class="line">	digitalWrite(outPin,HIGH); </div><div class="line">	delay(delayTime); </div><div class="line">	digitalWrite(outPin,LOW);</div><div class="line">	delay(delayTime);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###模拟输出</p>
+<ul>
+<li>analogWrite()函数不需要在setup中设置输出引脚的方向。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">analogWrite(PinMode,pwm);</div></pre></td></tr></table></figure>
+<h3 id="串口通讯Serial"><a href="#串口通讯Serial" class="headerlink" title="串口通讯Serial"></a>串口通讯Serial</h3><p><a href="http://wiki.dfrobot.com.cn/index.php/Serial" target="_blank" rel="external">详见</a></p>
+<h2 id="硬件相关"><a href="#硬件相关" class="headerlink" title="硬件相关"></a>硬件相关</h2><h3 id="单片机"><a href="#单片机" class="headerlink" title="单片机"></a>单片机</h3><p>Arduino的处理器，单片机全称为单片微型计算机,又被称为微控制器。</p>
+<p>单片机的组成如下图：</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_1.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/24</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/13/UI-ID-UE-GUI-是什么/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>UI ID UE GUI 是什么?</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    UI（User Interface）用户界面设计，是指对应用软件的操作逻辑、人机交互、界面的整体设计。从20 世纪80 年代起，用户界面设计成为了计算机科学的正式学科。在设计理念上，UI 设计不仅是让软件变得有个性、有品味，还要让软件的操作变得舒适、简单、自由，充分体现软件的定位和特点。
-ID（Interaction Design）交互设计，又称互动设计，它考虑的是人、环境与设备的关系和行为，以及传达这种行为的元素的设计。这个解释有点难懂。简单地说，我们进行交互设计，就是为了让产品更易用、有效，让人使用产品时感到舒适。同时，它需要了解用户和他们的期望，了解用户在同产品交互时彼此的行为，以...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/13</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/11/iOS面试题目/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS面试题目</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51372678
+<p>Arduino开发板上的单片机使用的是Atmel 公司生产的AVR单片机。</p>
+<h3 id="输入输出I／O"><a href="#输入输出I／O" class="headerlink" title="输入输出I／O"></a>输入输出I／O</h3><ul>
+<li>在Arduino上，模拟输入的端口为标着A0-A5的5个输入输出口，而ATmega2560则为A0-A16。这些模拟输入的电压范围在0V~5V之间，工作时将输入的电压转化为0~1023的对应值。在Arduino语言中有专门的函数来读取这个模拟输入的信号。这个函数为analogRead(int n)，该函数的参数为输入的引脚，返回一个0~1023的数值。</li>
+</ul>
+<h2 id="电子技术相关"><a href="#电子技术相关" class="headerlink" title="电子技术相关"></a>电子技术相关</h2><h3 id="电路图"><a href="#电路图" class="headerlink" title="电路图"></a>电路图</h3><p>下面是最简单的小灯电路图</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_2.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/11</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/06/iOS-面试-笔试题/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS 面试 + 笔试题</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51331654
+<h3 id="电子元件"><a href="#电子元件" class="headerlink" title="电子元件"></a>电子元件</h3><p>####电阻器<br>电阻器简称电阻，是一种常见的控制电压电流的电子元件，其表面的色环表示其阻值，5色环精度较4色环高。电阻器的单位为Ω，称作欧姆，1MΩ=1000kΩ=1000000Ω。</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_3.png" alt="测试图片" width="200" height="auto" align="center"><br></div><br>####发光二极管<br>发光二极管（LED）作为常见的指示元件，短引脚为负极，长引脚为正极，一般工作电压为1.8V~4.5V，电流为几十mA~几百mA。<br><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_4.png" alt="测试图片" width="200" height="auto" align="center"><br></div><br>####开关<br><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_5.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/06</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/05/05/iOS-面试题/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS 面试题</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    http://blog.csdn.net/miaotianyuu/article/details/51321662
+<p>####电容器<br>电容器简称电容，是一种储能元件，能实现滤波、耦合等功能。其换算单位是1F = 1E6μF = 1E9nF = 1E12pF。常见的电容有独石电容和电解电容，独石电容没有正负极，上面标写的数值代表其容量，如104=1E4pF=0.1μF。电解电容带有正负极，长脚为正短脚为负，负极一侧有一条白色的指示带作为标示，电容上印有额定电压和容量。</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/f48958a959ea0a877a9775a57c44c2015fd243e3/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_11.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+<p>####晶体振荡器<br>石英晶体振荡器简称晶振，是以机械的方式产生系统时钟信号的，常见的晶振分为有源晶振和无源晶振。</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_6.png" alt="测试图片" width="200" height="auto" align="center"><br></div><br>####七段数码管<br>七段数码管是有七个发光二极管组成的电子元件，可以独立的发光和熄灭，从而可以显示0~9数字。七段数码管又分为共阴极和共阳极两种类型，电源与所有的发光二极管的正极相连为共阳极，反之为共阴极。<br><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_7.png" alt="测试图片" width="200" height="auto" align="center"><br></div><br>####米字数码管<br>米字数码管是七段数码管的加强版，包含16个发管二极管，可以显示0~9数字以及一些英文字母。<br><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_8.png" alt="测试图片" width="200" height="auto" align="center"><br></div><br>####蜂鸣器<br>蜂鸣器是一种报警装置，能实现电声转换，只要两个引脚接上电压，即可发出声音，一般的工作电流为35mA，电压有3、6、12V等几种。<br><div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_9.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
+
+<p>####三极管<br>三极管是一个很基础的电子元件，用来实现小电流控制大电流的功能，3个引脚，分别为基极、集电极、发射极，分别用B、C、E来表示。常见的三极管有PNP和NPN两种类型。</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/moshaoqian/MacDownPhoto/1829ecdfd5dc25712c9eb3ec5abc24308c44731c/%E5%8D%9A%E5%AE%A2/Arduino%E5%AD%A6%E4%B9%A0/arduino_10.png" alt="测试图片" width="200" height="auto" align="center"><br></div>
+
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><a href="http://www.dfrobot.com.cn/community/forum.php?mod=viewthread&amp;tid=10940&amp;extra=page=1" target="_blank" rel="external">Arduino语法参考手册</a></p>
+<p><a href="https://wenku.baidu.com/view/4040861d58fafab069dc02d4.html" target="_blank" rel="external">从零开始学arduino</a></p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="next">
+                <a href= "/2017/08/29/flappyBird 大纲（一）/" title= flappyBird（一） >
+                    <span>Next Post</span>
+                    <span>flappyBird（一）</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 面试>面试</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/05</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+
+<!-- City版安装代码已完成 -->
 </main>
             <!-- profile -->
             
