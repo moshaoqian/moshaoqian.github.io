@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        Arduino语法之串口通讯Serial · 莫少谦的创意工厂
+        
+    </title>
+    <link rel="icon" href= /assests/favicon.ico>
+    <!-- 提前加载place holder  -->
+    <style>
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url('/font/Oswald-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: url('/font/Source Sans Pro.woff'),
+            url('/font/Source Sans Pro.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('/font/SourceCodePro-Regular.ttf.woff'),
+            url('/font/SourceCodePro-Regular.ttf.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0px;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2s ease-in-out 0s 15;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        99% {
+            transform: translate3d(0, 0, 0);
+        }
+        99.1% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(-226px, 0, 0);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+        <div class="toggle-banner">
+            <div class="blog-title">
+                <a href="/" >莫少谦的创意工厂</a>
+            </div>
+            <div class="post-banner">
+                <span class="post-name">Arduino语法之串口通讯Serial</span>
+            </div>
+        </div>
+    </div>
+    
+    <a class="home-link" href=/>莫少谦的创意工厂</a>
+</header>
+    
+    
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+    
+    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            Arduino语法之串口通讯Serial
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+        </p>
+        <!-- 404 -->
+        
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/09/08</span>
+            </div>
+            <!-- 
+
+<div class="post-share iconfont-archer">
+    <ul class="share-box" data-href = "/2017/09/08/Arduino语法之串口通讯Serial/" data-title = "Arduino语法之串口通讯Serial" >
+        <li class="to-weibo">分享到微博</li>
+        <li class="to-wechat">分享到微信</li>
+        <li class="to-qq">分享到QQ</li>
+        <li class="to-twitter">分享到twitter</li>
+    </ul>
+</div> -->
+        
+    </div>
+</div>
+        <div class="container">
+            <main class="main post-page">
+    <div class="qr-mask"></div>
+<div class="QRcode-box">
+    <p>扫描二维码分享</p>
+    <div class="QRcode-close">×</div>
+</div>
+    <article class="article-entry">
+        <h1 id="Arduino语法之串口通讯Serial"><a href="#Arduino语法之串口通讯Serial" class="headerlink" title="Arduino语法之串口通讯Serial"></a>Arduino语法之串口通讯Serial</h1><h2 id="Serial-begin"><a href="#Serial-begin" class="headerlink" title="Serial.begin()"></a>Serial.begin()</h2><ul>
+<li><p>含义：打开串口 </p>
+</li>
+<li><p>参数：speed 波特率</p>
+</li>
+<li><p>代码示例：</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Serial.begin(<span class="number">9600</span>);</div></pre></td></tr></table></figure>
+<h2 id="Serial-available"><a href="#Serial-available" class="headerlink" title="Serial.available()"></a>Serial.available()</h2><ul>
+<li>含义：获取串口上可读取的数据的字节数。该数据是指已经到达并存储在接收缓存（共有64字节）中。available()继承自Stream实用类。</li>
+<li>参数：无</li>
+<li>返回值：返回可读取的字节数</li>
+<li>代码示例：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> incomingByte = <span class="number">0</span>;   <span class="comment">// for incoming serial data</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">        Serial.begin(<span class="number">9600</span>);     <span class="comment">// opens serial port, sets data rate to 9600 bps</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">// send data only when you receive data:</span></div><div class="line">        <span class="keyword">if</span> (Serial.available() &gt; <span class="number">0</span>) &#123;</div><div class="line">                <span class="comment">// read the incoming byte:</span></div><div class="line">                incomingByte = Serial.read();</div><div class="line"></div><div class="line">                <span class="comment">// say what you got:</span></div><div class="line">                Serial.print(<span class="string">"I received: "</span>);</div><div class="line">                Serial.println(incomingByte, DEC);</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Serial-read"><a href="#Serial-read" class="headerlink" title="Serial.read()"></a>Serial.read()</h2><ul>
+<li>含义：读串口数据，read()继承自Stream实用类。</li>
+<li>参数：无</li>
+<li>返回值：串口上第一个可读取的字节（如果没有可读取的数据则返回-1）- int型。</li>
+<li>代码示例：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> incomingByte = <span class="number">0</span>;   <span class="comment">// 用于存储从串口读到的数据</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">        Serial.begin(<span class="number">9600</span>);     <span class="comment">// 打开串吕，设置速率为9600 bps</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">// 只在收到数据时发送数据</span></div><div class="line">        <span class="keyword">if</span> (Serial.available() &gt; <span class="number">0</span>) &#123;</div><div class="line">                <span class="comment">// 读取传入的字节</span></div><div class="line">                incomingByte = Serial.read();</div><div class="line"></div><div class="line">                <span class="comment">// 指示你收到的数据</span></div><div class="line">                Serial.print(<span class="string">"I received: "</span>);</div><div class="line">                Serial.println(incomingByte, DEC);</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Serial-flush"><a href="#Serial-flush" class="headerlink" title="Serial.flush()"></a>Serial.flush()</h2><ul>
+<li>含义：刷新串口数据，等待串口数据完成输出。</li>
+</ul>
+<p>##Serial.print()和Serial.println()</p>
+<ul>
+<li>含义：往串口发数据，无换行。</li>
+<li>语法：<code>Serial.print(val)</code></li>
+<li>参数：val: 要发送的数据</li>
+<li>代码示例：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Serial.print(<span class="string">"DEC"</span>);</div></pre></td></tr></table></figure>
+<h2 id="Serial-peak"><a href="#Serial-peak" class="headerlink" title="Serial.peak()"></a>Serial.peak()</h2><ul>
+<li>含义：返回收到的串口数据的下一个字节（字符），参考Serial.read()</li>
+</ul>
+<h2 id="SerialEvent"><a href="#SerialEvent" class="headerlink" title="SerialEvent()"></a>SerialEvent()</h2><ul>
+<li>含义：当串口有数据到达时该函数将被调用（然后使用Serial.read()捕获该数据）。</li>
+<li>代码示例：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">serialEvent</span><span class="params">()</span></span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="previous">
+                <a href= "/2017/09/09/Arduino语法之数字I-O/" title= Arduino语法之数字I/O >
+                    <span>Previous Post</span>
+                    <span>Arduino语法之数字I/O</span>
+                </a>
+            </li>
+        
+        
+            <li class="next">
+                <a href= "/2017/09/07/Arduino语法之模拟I-O/" title= Arduino语法之模拟I/O >
+                    <span>Next Post</span>
+                    <span>Arduino语法之模拟I/O</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
+    
+
+<!-- City版安装代码已完成 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="https://github.com/moshaoqian" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+            
+                <a href="http://weibo.com/u/3636304432" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
+        
+    
+        
+            
+                <a href="emailto:moshaoqian@live.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span>
+        <span
+            id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 51 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2017/09/12/Arduino语法之位操作/" >Arduino语法之位操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2017/09/11/Arduino语法之中断函数/" >Arduino语法之中断函数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2017/09/10/Arduino语法之随机数/" >Arduino语法之随机数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2017/09/09/Arduino语法之数字I-O/" >Arduino语法之数字I/O</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/08</span><a class="archive-post-title" href= "/2017/09/08/Arduino语法之串口通讯Serial/" >Arduino语法之串口通讯Serial</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2017/09/07/Arduino语法之模拟I-O/" >Arduino语法之模拟I/O</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2017/09/06/Winebottler与Crossover/" >Crossover理解</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2017/09/06/Arduino学习/" >Arduino学习入门</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2017/08/29/flappyBird 大纲（一）/" >flappyBird（一）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2017/08/28/iOS模拟器录制屏幕生成Gif/" >iOS模拟器录制屏幕生成Gif</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2017/08/28/全局忽略DS_Store/" >全局忽略DS_Store</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/28</span><a class="archive-post-title" href= "/2017/08/28/ Xcode关联方法将项目托管到GitHub/" >Xcode关联方法将项目托管到GitHub</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/25</span><a class="archive-post-title" href= "/2017/08/25/Swift学习整理/" >Swift学习整理(持续更新中)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/25</span><a class="archive-post-title" href= "/2017/08/25/hexo域名绑定/" >Hexo + 域名绑定</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/24</span><a class="archive-post-title" href= "/2017/08/24/MacDown进阶语法/" >MacDown进阶语法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/23</span><a class="archive-post-title" href= "/2017/08/23/关于github托管MacDown图片的心得/" >关于github托管MacDown图片的心得</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/MacDown基础语法/" >MacDown 基础语法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/hexo搭建博客/" >Hexo + GitHub 搭建博客</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2016 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2016/08/15/iOS-应用内跳转APPStore/" >iOS 应用内跳转APPStore</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2016/08/08/mac-复制文件出错-8058错误/" >mac 复制文件出错 8058错误</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2016/05/24/iOS-100道面试题-绝对干货/" >iOS 100道面试题 绝对干货</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2016/05/13/UI-ID-UE-GUI-是什么/" >UI ID UE GUI 是什么?</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2016/05/11/iOS面试题目/" >iOS面试题目</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href= "/2016/05/06/iOS-面试-笔试题/" >iOS 面试 + 笔试题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span><a class="archive-post-title" href= "/2016/05/05/iOS-面试题/" >iOS 面试题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href= "/2016/04/22/iOS-更改项目名称/" >iOS 更改项目名称</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href= "/2016/04/15/iOS-RunLoop笔记/" >iOS RunLoop笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/15</span><a class="archive-post-title" href= "/2016/04/15/iOS-RunLoop处理逻辑（图解/" >iOS RunLoop处理逻辑（图解)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span><a class="archive-post-title" href= "/2016/04/14/iOS-Xcode7真机调试/" >iOS Xcode7真机调试</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href= "/2016/04/13/iOS-APP上架流程-详细/" >iOS APP上架流程(详细)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href= "/2016/04/13/CocoaPods的安装使用/" >CocoaPods的安装使用</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href= "/2016/04/08/Xcode-OS-X-iOS版本对应/" >Xcode,OS X,iOS版本对应</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href= "/2016/04/08/iOS UIMenuController简介/" >iOS UIMenuController简介</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/iOS内存管理机制总结/" >iOS内存管理机制总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/error-linker-command-failed-with-exit-code-1-use-v-to-see-invocation/" >error: linker command failed with exit code 1 (use -v to see invocation)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/iOS类方法与对象方法/" >iOS类方法与对象方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/SDWebImage底层实现原理/" >SDWebImage底层实现原理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/05</span><a class="archive-post-title" href= "/2016/04/05/iPhone分辨率及尺寸总结/" >iPhone分辨率及尺寸总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/05</span><a class="archive-post-title" href= "/2016/04/05/iOS关键字/" >iOS关键字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/05</span><a class="archive-post-title" href= "/2016/04/05/iOS启动页的渐变效果/" >iOS启动页的渐变效果</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href= "/2016/03/28/马太效应/" >马太效应</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2016/03/23/10000小时定律/" >10000小时定律</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2016/03/23/iOS项目小结/" >iOS项目小结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Xcode快捷键/" >Xcode快捷键</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS开发模式之单例模式/" >iOS开发模式之单例模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/解耦合/" >解耦合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/14</span><a class="archive-post-title" href= "/2016/03/14/NSOperationQueue-GCD-NSThread总结/" >NSOperationQueue GCD NSThread总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/14</span><a class="archive-post-title" href= "/2016/03/14/进程总结/" >进程总结</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">技术</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Arduino</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">随记</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">多线程</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">OC</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">语法</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Swift</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Mac</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">UIKit</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">面试</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">RunLoop</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">网络</a></span>
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    <!--  browser-sync -->
+    <!-- <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.12'><\/script>".replace("HOST", location.hostname));
+    //]]>
+    </script> -->
+</html>
+
+

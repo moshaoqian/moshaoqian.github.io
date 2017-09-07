@@ -117,6 +117,274 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/12/Arduino语法之位操作/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之位操作</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之位操作取低字节1#define  lowByte(w)   ((w) &amp; 0xff)
+取高字节1#define  highByte(w)   ((w) &gt;&gt; 8)
+取高字节1#define  highByte(w)   ((w) &gt;&gt; 8)
+读一个bit1#define  bitRead(value, bit)   (((value) &gt;&gt; (bit)) &amp; 0x01)
+写一个bit1#define  bitWrite(value, bit, bitvalue)   (bitvalue ? bitSet(value,...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/12</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/11/Arduino语法之中断函数/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之中断函数</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之中断函数AttachInterrupt()
+含义：设置中断指定中断函数. 外部中断有0和1两种, 一般对应2号和3号数字引脚.
+引脚说明：
+中断0脚就是D2
+中断1脚就是D3
+
+
+参数：
+interrupt 中断类型, 0或1
+fun 对应函数
+mode 触发方式. 有以下几种:
+LOW 低电平触发中断
+CHANGE 变化时触发中断
+RISING 低电平变为高电平触发中断
+FALLING 高电平变为低电平触发中断
+
+
+
+
+注解：在中断函数中 delay 函数不能使用, millis 始终返回进入中断前的值. 读串口数据的话, 可能会丢失. 中断函数中使用的变量需要定义...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/10/Arduino语法之随机数/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之随机数</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之随机数RandomSeed()
+定义：设置随机种子可以用当前时间作为随机种子. 随机种子的设置对产生的随机序列有影响.
+参数：seed 随机种子
+
+Random()###long random (long howbig)   
+
+生成[0, howbig-1]范围的随机数.
+
+参数:  howbig 最大值
+
+
+long random (long howsmall, long howbig)
+生成[howsmall, howbig-1]范围的随机数.
+参数：
+howsmall 最小值
+howbig 最大值
+
+
+
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/10</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/09/Arduino语法之数字I-O/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之数字I/O</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之数字I/OPinMode()配置引脚为输出或输出模式.
+参数：
+
+pin 引脚编号
+mode: INPUT, OUTPUT, 或 INPUT_PULLUP.
+
+注解：
+模拟引脚也可以当作数字引脚使用, 编号为14(对应模拟引脚0)到19(对应模拟引脚5).
+DigitalWrite()写数字引脚, 对应引脚的高低电平. 在写引脚之前, 需要将引脚设置为OUTPUT模式.
+参数：
+
+pin 引脚编号
+value HIGH 或 LOW
+
+代码示例：
+1234567891011121314int ledPin = 13;                 // LED con...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/09</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/08/Arduino语法之串口通讯Serial/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之串口通讯Serial</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之串口通讯SerialSerial.begin()
+含义：打开串口 
+
+参数：speed 波特率
+
+代码示例：
+
+
+1Serial.begin(9600);
+Serial.available()
+含义：获取串口上可读取的数据的字节数。该数据是指已经到达并存储在接收缓存（共有64字节）中。available()继承自Stream实用类。
+参数：无
+返回值：返回可读取的字节数
+代码示例：
+
+123456789101112131415161718int incomingByte = 0;   // for incoming serial datavoid setup() &#...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/08</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/09/07/Arduino语法之模拟I-O/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Arduino语法之模拟I/O</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Arduino语法之模拟I/OAnalogReference()void analogReference (uint8_t type)
+配置参考电压配置模式引脚的参考电压. 函数 analogRead 在读取模拟值之后, 将根据参考电压将 模拟值转换到[0,1023]区间. 有以下类型:
+DEFAULT : 默认5V. INTERNAL: 低功耗模式. ATmega168和ATmega8对应1.1V到2.56V. EXTERNAL: 扩展模式. 通过AREF引脚获取参考电压.
+参数：type 参考类型(DEFAULT/INTERNAL/EXTERNAL)
+AnalogRead()int ...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/09/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2017/09/06/Arduino学习/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
@@ -151,7 +419,7 @@ loop()该函数在程序运行...
     
         <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 嵌入式>嵌入式</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = Arduino>Arduino</a>
     
 </div>
                 
@@ -188,9 +456,9 @@ Gifrocket转换成GIF链接
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
 </div>
                 
@@ -232,9 +500,9 @@ excludesfile = /Users/re...
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
 </div>
                 
@@ -265,9 +533,9 @@ excludesfile = /Users/re...
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
     
 </div>
                 
@@ -278,133 +546,11 @@ excludesfile = /Users/re...
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/25/hexo域名绑定/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>Hexo + 域名绑定</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    自己的博客网站http://miaotianyu.cn/终于绑定成功了。整理一下步骤与遇到的问题。
-Hexo域名绑定步骤：
-
-域名注册https://wanwang.aliyun.com/
-与github pages进行绑定
-
-修改你域名的DNS地址拥有域名并且是可用状态。修改域名的DNS地址为f1g1ns1.dnspod.net和f1g1ns2.dnspod.net
-
-
-注册DNSpod地址DNSpod
-点击域名解析 –&gt; 添加域名 –&gt; 添加记录
-
-
-其中记录中CHAME的值是你的github pages的地址
-本地站点生成CHAME在你的本地站点目录里的source目录...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/25</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/23/关于github托管MacDown图片的心得/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>关于github托管MacDown图片的心得</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    总结：连接远程仓库有两种方式可以选择一种是HTTPS请求的，一种是SSH密钥对。利用Xcode中HTTPS请求方式托管项目的方法不受设置全局git用户名/邮箱的影响，也就是说，一个Xcode可以关联N个远程仓库而互不影响。
-Reference：Markdown中插入图片有什么技巧？
-在mac上使用Git和GitHub连接
-一台电脑绑定两个github帐号教程
-利用Xcode而非SSH Key将项目托管到GitHub
-
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/08/22/hexo搭建博客/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>Hexo + GitHub 搭建博客</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    Hexo搭建博客整理。
-整理一下安装流程
-
-hexo是基于nodejs的，需安装nodejs，安装nodejs最好选择homebrew
-首先查看电脑是否安装ruby，因为homebrew安装依赖ruby
-安装顺序：homebrew-&gt;nodejs-&gt;hexo
-
-Hexo + GitHub 搭建博客准备
-Mac 
-Xcode
-终端
-
-安装homebrew1ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-安装node.js1bre...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 技术>技术</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/08/22</span>
-                </div>
-            </div>
-        </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/tags/技术/page/2/">2</a><a class="extend next" rel="next" href="/tags/技术/page/2/">#NEXT</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -1071,7 +1217,173 @@ Xcode
     
     
     
-    <div class="total-archive"> Total : 45 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 51 </div>
     
     <div class="post-archive">
     
@@ -1080,6 +1392,36 @@ Xcode
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2017/09/12/Arduino语法之位操作/" >Arduino语法之位操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2017/09/11/Arduino语法之中断函数/" >Arduino语法之中断函数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2017/09/10/Arduino语法之随机数/" >Arduino语法之随机数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2017/09/09/Arduino语法之数字I-O/" >Arduino语法之数字I/O</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/08</span><a class="archive-post-title" href= "/2017/09/08/Arduino语法之串口通讯Serial/" >Arduino语法之串口通讯Serial</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2017/09/07/Arduino语法之模拟I-O/" >Arduino语法之模拟I/O</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1133,12 +1475,12 @@ Xcode
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/hexo搭建博客/" >Hexo + GitHub 搭建博客</a>
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/MacDown基础语法/" >MacDown 基础语法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/MacDown基础语法/" >MacDown 基础语法</a>
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/hexo搭建博客/" >Hexo + GitHub 搭建博客</a>
         </li>
     
     
@@ -1282,12 +1624,12 @@ Xcode
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
         </li>
     
     
@@ -1320,25 +1662,25 @@ Xcode
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">技术</a></span>
     
+        <span class="sidebar-tag-name"><a href= "#">Arduino</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
+    
         <span class="sidebar-tag-name"><a href= "#">随记</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">嵌入式</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">多线程</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">OC</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">Mac</a></span>
+        <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">Swift</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Mac</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">UIKit</a></span>
     

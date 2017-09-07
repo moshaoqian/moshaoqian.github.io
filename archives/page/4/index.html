@@ -117,6 +117,245 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/13/CocoaPods的安装使用/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>CocoaPods的安装使用</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    总结一些大牛的博客，很实用。
+CocoaPods的安装使用：用CocoaPods做iOS程序的依赖管理，唐巧的博客，非常全面。
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/13</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/08/Xcode-OS-X-iOS版本对应/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>Xcode,OS X,iOS版本对应</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    Xcode版本和iOS版本是开发者经常会被问到的问题，今天以列表的形式总结一下，希望对大家有用。
+
+
+
+XcodeVerson
+OS X SDK(s)
+iOS SDK(s)
+iPhone
+
+
+
+
+Xcode(4.2-4.3)
+OS X(10.6.x-10.7.x)
+iOS (5.0-5.1)
+iPhone4s
+
+
+Xcode(4.4-4.6.3)
+OS X(10.7.x)
+iOS 6.0
+iPhone5
+
+
+Xcode(5.0-5.1)
+OS X(10.8-10.9)
+iOS (7.0-7.1)
+iPhone5s
+
+
+Xcode(6.0.1-6.2)
+OS X(10.9-10.10)
+i...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/08</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/08/iOS UIMenuController简介/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS UIMenuController简介</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    一点小知识，有必要总结一下。
+
+Menu所处的View必须实现– (BOOL)canBecomeFirstResponder,且返回YES
+Menu所处的View必须实现 – (BOOL)canPerformAction:withSender,并根据需求返回YES或NO
+使Menu所处的View成为First ResponderbecomeFirstResponder
+定位Menu - setTargetRect:inView:
+展示Menu - setMenuVisible:animated:
+
+###代码栗子如下
+12345678910111213141516UIMenuContro...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = UIKit>UIKit</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/08</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/07/iOS内存管理机制总结/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS内存管理机制总结</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    iOS框架的内存管理机制看似比较复杂，其实不然。一套把戏的制定，必然有她的道理。我认为ios框架的内存机制的本质是为了更好的让设计人员方便管理内存，减少程序中的内存泄露，在内存管理难度与性能之间找一个最佳的平衡点。假设你开辟了一块新内存，并把内存地址付给指针A，后来你也想让指针B也共享这块内存，于是你把指针A付给指针B，这个时候，A和B都指向同一块内存。如果A在没有通知B的情况下，A擅自把把这块内存释放了，B使用这块内存的时候，程序必然会crash掉。
+　　有没有办法在释放内存的时候，通知一下所有正在和将来要引用这块内存的所有指针呢？答应是有的，只不过这种通知，不是主动式通知。在Obje...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/07/error-linker-command-failed-with-exit-code-1-use-v-to-see-invocation/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>error: linker command failed with exit code 1 (use -v to see invocation)</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    今天些项目出现的小bug,各种调试各种找答案，感觉这个答案挺有用的，借鉴下。
+error如下：123456789101112Users/zhangtianjian/Library/Developer/Xcode/DerivedData/ClothingOrders-bcmqkcjsfgyibbgetgiyczzqcerj/Build/Products/Debug-iphonesimulator/ClothingOrders.app/ClothingOrders normal i386    cd /Users/zhangtianjian/Desktop/SVN    setenv IPH...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = bug总结>bug总结</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/07/SDWebImage底层实现原理/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>SDWebImage底层实现原理</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    
+根据图片的URL去ImageCache中获取图片。如果存在，将图片显示在cell上，如果不存在，执行2.
+检查沙盒中存不存在对应的图片。如果存在，将沙盒的图片添加到imageCache中，如果不存在，执行3。
+显示占位图片。
+根据图片的URL查看operationCache存不存在下载操作，如果存在，证明当前图片正在下载，不用重复操作。如果不存在，执行5.
+创建图片下载操作放到operationCache中。
+下载完毕时，执行两步操作，一是将当前操作从operationCache中移除，二是将下载的图片添加到imageCache中。
+刷新tableView。
+将图片存入沙盒。
+
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2016/04/07/iOS类方法与对象方法/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
@@ -330,229 +569,10 @@ import关键字#import 和 #include 的异同相同点：1.都是预编译指令
             </div>
         </article>
     
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/28/马太效应/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>马太效应</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    马太效应，指强者愈强、弱者愈弱的现象，反映的社会现象是两极分化，富的更富，穷的更穷。名字来自圣经《新约·马太福音》一则寓言： “凡有的，还要加倍给他叫他多余；没有的，连他所有的也要夺过来”。“马太效应”与“平衡之道”相悖；与“二八定则”类似，是十分重要的人类社会规律。中国古代哲学家老子曾提出类似的思想：“天之道，损有余而补不足。人之道则不然，损不足以奉有余。”
-
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 随记>随记</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/28</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/23/10000小时定律/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>10000小时定律</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    作家格拉德威尔在《异类》一书中指出：
-“人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续       
-不断的努力。1万小时的锤炼是任何人从平凡变成超凡的必要条件。“
-他将此称为“一万小时定律”。
-要成为某个领域的专家，需要10000小时，按比例计算就是：如果每天工作八个小时，一周工作五天，那么成为一个领域的专家至少需要五年。这就是一万小时定律。
-其实对于成功者来说，不管练习的过程枯燥与否，有趣与否，他们都必将付出远远超出常人的代价。心甘情愿花上一万个小时来打通任督二脉的人，大都不是寻常之辈。
-从心理学上分析，用上千上万小时来做一件事并不是一件理性的事。常常会产生困扰，还会...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 随记>随记</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/23/iOS项目小结/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS项目小结</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    2016.3.23
-总结一些小项目的步骤，菜鸟出品。
-一. 项目小结##三方介绍
-SDWebImage与UIImageView+SDWebImage介绍SDWebImage这个类库提供一个UIImageView类别以支持加载来自网络的远程图片。具有缓存管理、异步下载、同一个URL下载次数控制和优化等特征。
-UIImageView+SDWebImage是SDWebImage的一个类别，同时也是对SDWebImage的封装，我们写项目的时候只需要调用它就可以了。
-用途简单来说，就是当我们重写UITableViewCell的时候，需要给cell的iconView属性赋值，这时候需要调用：
-12...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/22/Xcode快捷键/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>Xcode快捷键</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    感觉很实用，希望自己能养成良好的敲代码习惯。
-1. 文件CMD + N: 新文件
-CMD + SHIFT + N: 新项目
-CMD + O: 打开
-CMD + S: 保存
-CMD + SHIFT + S: 另存为
-CMD + W: 关闭窗口
-CMD + SHIFT + W: 关闭文件
-2. 编辑CMD + [: 左缩进
-CMD + ]: 右缩进
-CMD + CTRL + LEFT: 折叠
-CMD + CTRL + RIGHT: 取消折叠
-CMD + CTRL + TOP: 折叠全部函数
-CMD + CTRL + BOTTOM: 取消全部函数折叠
-CTRL + U: 取消全部折叠
-CMD ...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/22/iOS开发模式之单例模式/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS开发模式之单例模式</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    iOS单例模式(Singleton)单例模式的意思就是只有一个实例。单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。这个类称为单例类。
-1.单例模式的要点：　　显然单例模式的要点有三个；一是某个类只能有一个实例；二是它必须自行创建这个实例；三是它必须自行向整个系统提供这个实例。
-2.单例模式的优点：
-实例控制：Singleton 会阻止其他对象实例化其自己的 Singleton 对象的副本，从而确保所有对象都访问唯一实例。
-灵活性：因为类控制了实例化过程，所以类可以更加灵活修改实例化过程
-性能高： 由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/22/iOS的系统框架/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS的系统框架</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    简介 iOS是于UNIX内核，android基于Linux内核。 iOS的系统架构分为四个层次：核心操作系统层（Core OS layer）、核心服务层（Core Services layer）、媒体层（Media layer）和可触摸层（Cocoa Touch layer）。下面是IOS系统结构图。
-iOS系统结构
-Core OS是位于ios系统架构最下面的一层是核心操作系统层，它包括内存管理、文件系统、电源管理以及一些其他的操作系统任务。它可以直接和硬件设备进行交互。作为app开发者不需要与这一层打交道。
-Core Services是核心服务层，可以通过它来访问iOS的一些服务。
-M...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
-                </div>
-            </div>
-        </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/3/">#PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/5/">#NEXT</a>
+        <a class="extend prev" rel="prev" href="/archives/page/3/">#PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/5/">#NEXT</a>
     </nav>
     
 </main>
@@ -1220,7 +1240,173 @@ M...
     
     
     
-    <div class="total-archive"> Total : 45 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 51 </div>
     
     <div class="post-archive">
     
@@ -1229,6 +1415,36 @@ M...
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2017/09/12/Arduino语法之位操作/" >Arduino语法之位操作</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2017/09/11/Arduino语法之中断函数/" >Arduino语法之中断函数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span><a class="archive-post-title" href= "/2017/09/10/Arduino语法之随机数/" >Arduino语法之随机数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/09</span><a class="archive-post-title" href= "/2017/09/09/Arduino语法之数字I-O/" >Arduino语法之数字I/O</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/08</span><a class="archive-post-title" href= "/2017/09/08/Arduino语法之串口通讯Serial/" >Arduino语法之串口通讯Serial</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span><a class="archive-post-title" href= "/2017/09/07/Arduino语法之模拟I-O/" >Arduino语法之模拟I/O</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1282,12 +1498,12 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/hexo搭建博客/" >Hexo + GitHub 搭建博客</a>
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/MacDown基础语法/" >MacDown 基础语法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/MacDown基础语法/" >MacDown 基础语法</a>
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2017/08/22/hexo搭建博客/" >Hexo + GitHub 搭建博客</a>
         </li>
     
     
@@ -1431,12 +1647,12 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
         </li>
     
     
@@ -1469,25 +1685,25 @@ M...
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
-    
         <span class="sidebar-tag-name"><a href= "#">技术</a></span>
     
+        <span class="sidebar-tag-name"><a href= "#">Arduino</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">iOS</a></span>
+    
         <span class="sidebar-tag-name"><a href= "#">随记</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">嵌入式</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">多线程</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">OC</a></span>
     
-        <span class="sidebar-tag-name"><a href= "#">Mac</a></span>
+        <span class="sidebar-tag-name"><a href= "#">语法</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">Swift</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">bug总结</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Mac</a></span>
     
         <span class="sidebar-tag-name"><a href= "#">UIKit</a></span>
     
