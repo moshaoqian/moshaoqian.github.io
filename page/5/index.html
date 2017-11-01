@@ -122,6 +122,56 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/07/iOS类方法与对象方法/" >
+                <div class="abstract-post-title">
+                    <h2 class="abstract-title">
+                        
+                        <span>iOS类方法与对象方法</span>
+                    </h2>
+                </div>
+                <div class="abstract-content">
+                    类方法：类方法是可以直接使用类的引用，不需要实例化就可以直接使用的方法。一般写一些工具方法。
+##类方法：
+
+声明和实现的时候，以(+)开头
+类方法属于类的本身，只能通过类名调用
+类方法不能直接访问成员变量
+类方法不能直接调用对象方法（可以间接调用）
+
+间接调用：
+把对象当做形参传入
+在类方法中创建一个对象
+
+类方法的好处：调用类方法的时候，不用创建对象，更节省内存，调用比较简单，效率高。
+什么时候使用类方法？ 当不需要访问成员变量的时候
+对象方法：
+声明和实现的时候，以(-)开头
+对象方法隶属于对象，只能通过对象调用
+对象方法可以直接访问成员变量
+对象方法可以调用其他的对象方法以及类方...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = OC>OC</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/07</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2016/04/05/iPhone分辨率及尺寸总结/" >
                 <div class="abstract-post-title">
                     <h2 class="abstract-title">
@@ -486,44 +536,6 @@ iOS系统结构
 Core OS是位于ios系统架构最下面的一层是核心操作系统层，它包括内存管理、文件系统、电源管理以及一些其他的操作系统任务。它可以直接和硬件设备进行交互。作为app开发者不需要与这一层打交道。
 Core Services是核心服务层，可以通过它来访问iOS的一些服务。
 M...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = iOS>iOS</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/03/22</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2016/03/22/iOS常用的开发模式总结/" >
-                <div class="abstract-post-title">
-                    <h2 class="abstract-title">
-                        
-                        <span>iOS常用的开发模式总结</span>
-                    </h2>
-                </div>
-                <div class="abstract-content">
-                    iOS开发学习中，常用的开发模式有：代理模式，观察者模式，MVC模式，单例模式，策略模式，工厂模式等，下面简单的介绍下。
-（一）代理模式应用场景：当一个类的某些功能需要由别的类来实现，但是又不确定具体会是哪个类实现。
-优势：解耦合
-敏捷原则：开放-封闭原则
-实例：tableview的 数据源delegate，通过和protocol的配合，完成委托诉求。列表row个数delegate自定义的delegate
-（二）观察者模式应用场景：一般为model层对，controller和view进行的通知方式，不关心谁去接收，只负责发布信息。
-优势：解耦合
-敏捷原则：接口隔离原则，开放-封闭原则
-实...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -1446,7 +1458,32 @@ M...
     
     
     
-    <div class="total-archive"> Total : 54 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 55 </div>
     
     <div class="post-archive">
     
@@ -1455,6 +1492,11 @@ M...
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2017/11/01/iOS 11适配相关/" >iOS 11适配</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1657,12 +1699,12 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/SDWebImage底层实现原理/" >SDWebImage底层实现原理</a>
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/iOS类方法与对象方法/" >iOS类方法与对象方法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/iOS类方法与对象方法/" >iOS类方法与对象方法</a>
+            <span class="archive-post-date">04/07</span><a class="archive-post-title" href= "/2016/04/07/SDWebImage底层实现原理/" >SDWebImage底层实现原理</a>
         </li>
     
     
@@ -1687,27 +1729,17 @@ M...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2016/03/23/iOS项目小结/" >iOS项目小结</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2016/03/23/10000小时定律/" >10000小时定律</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2016/03/23/iOS项目小结/" >iOS项目小结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Xcode快捷键/" >Xcode快捷键</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
         </li>
     
     
@@ -1718,6 +1750,16 @@ M...
     
         <li class="archive-post-item">
             <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/Mac-Spotlight搜索快捷键/" >Mac Spotlight搜索快捷键</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS常用的开发模式总结/" >iOS常用的开发模式总结</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/22</span><a class="archive-post-title" href= "/2016/03/22/iOS的系统框架/" >iOS的系统框架</a>
         </li>
     
     
